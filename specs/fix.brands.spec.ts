@@ -3,6 +3,35 @@ import * as supertest from 'supertest';
 //import { describe, it } from 'node:test';
 const request = supertest('https://practice-react.sdetunicorns.com/api/test');
 
+describe('Brands Test', () => {
+    let newBrandId: any;
+
+    describe.skip('GET all brands Test',() => {
+      it('GET /brands', async () => {
+      const res = await request.get('/brands');  
+      //console.log(res);
+      //expect result code to be 200 (good)
+      expect(res.statusCode).toBe(200);
+      //expect the total returned brands to be greter than 1
+      expect(res.body.length).toBeGreaterThan(1);
+      //expect result to have _id and name
+      expect(Object.keys(res.body[0])).toEqual(['_id', 'name']); //use any other value as a none happy path check once
+      console.log(res.body[60]);
+         });
+    });  
+
+    
+    describe.skip('GET brand by Id Test',() => {
+      it('GET /brands/:id', async () => {
+      const res = await request.get('/brands/Samsung X26 Black');  
+      console.log(res.body);
+      //expect result code to be 200 (good)
+    //   expect(res.statusCode).toBe(200);
+      //expect name to be A Plus 5694'
+    //   expect(res.body.name).toEqual('A Plus 5694'); //use any other name value as a negative test
+         });
+    });
+
     describe('Create & Fetch a new brand Test',() => {
       it('POST a new /brands', async () => {
     
