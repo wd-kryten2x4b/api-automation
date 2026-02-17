@@ -66,32 +66,33 @@ it('POST an existing brand /brands', async () => {
       expect(res.body.error).toEqual('Brand name is too long'); //use any other name value as a negative test
          });
     
-        it('PUT brands must be string', async () => {
+        it('PUT brands description must be string', async () => {
         
         const numericName = Math.floor(Math.random() * 10000)
           const data = {
-        name: numericName,
+        name: newBrandId.name,
+        description: numericName
       };
       const res = await request.put('/brands/' + newBrandId._id)
       .send(data);  
       //expect result code to be 422 (error)
       expect(res.statusCode).toEqual(422);
       //expect name to be A Plus 5694'
-      expect(res.body.error).toEqual('Brand name must be a string');
+      expect(res.body.error).toEqual('Brand description must be a string');
  
          });
          
-       it('PUT brands Business Logi Invalid Brand', async () => {
+       it('PUT brands Business Logic - Invalid Brand', async () => {
         //generate a 24 digit number
         const data = {
         name: 'Brand to be updated',
       };
-      const res = await request.put('/brands/123456789123456789123456') //_id is 24 digits long. this is a hardcoded value
+      const res = await request.put('/brands/' + 123) //_id is 24 digits long. this is a hardcoded value
       .send(data);
       //expect result code to be 422 (error)
-      expect(res.statusCode).toEqual(404);
+      expect(res.statusCode).toEqual(422);
       //expect name to be A Plus 5694'
-      expect(res.body.error).toEqual('Brand not found.'); //use any other name value as a negative test
+      expect(res.body.error).toEqual('Unable to update brands'); //use any other name value as a negative test
          });        
         
     });
@@ -111,14 +112,14 @@ it('POST an existing brand /brands', async () => {
       it('DELETE Invalid brand', async () => {
 
       //Now delete the same brand
-      const res = await request.delete('/brands/123456789123456789123456');
+      const res = await request.delete('/brands/' + 1213);
 
       //print it out for clarification
       console.log(res.body);
       //check the status code
-      expect(res.statusCode).toEqual(404)
+      expect(res.statusCode).toEqual(422)
       //check the body
-      expect(res.body.error).toEqual('Brand not found.');
+      expect(res.body.error).toEqual('Unable to delete brand');
          });          
          
     });
