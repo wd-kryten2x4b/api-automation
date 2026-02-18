@@ -1,5 +1,6 @@
 import * as supertest from 'supertest';
-const request = supertest('https://practice-react.sdetunicorns.com/api/test');
+import config from '../config/base.config';
+const request = supertest(config.baseURL);
 
 class BrandContoller{
     getBrands(){
