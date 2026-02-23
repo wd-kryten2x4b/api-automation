@@ -13,7 +13,7 @@ describe('Categories API Test Cases', () => {
 
 describe('Create Categories', () => {
 
-    it.only('Verify Login', async () => {
+    it('Verify Login', async () => {
         const data ={
             "email": "mod@mail.com",
             "password": "Modpass123!",
