@@ -1,0 +1,96 @@
+import supertest from 'supertest';
+
+const request = supertest('https://practice-react.sdetunicorns.com/api/test');
+
+describe('Brands Test', () => {
+    let newBrandId: any;
+
+    describe('GET all brands Test',() => {
+      it('GET /brands', async () => {
+      const res = await request.get('/brands');  
+      //expect result code to be 200 (good)
+      expect(res.statusCode).toBe(200);
+      //expect the total returned brands to be greter than 1
+      expect(res.body.length).toBeGreaterThan(1);
+      //expect result to have _id and name
+      expect(Object.keys(res.body[0])).toEqual(['_id', 'name']); //use any other value as a none happy path check once
+         });
+    });  
+
+    
+    describe('GET brand by Id Test',() => {
+      it('GET /brands/:id', async () => {
+      const res = await request.get('/brands/Samsung X26 Black');  
+
+      //expect result code to be 200 (good)
+    //   expect(res.statusCode).toBe(200);
+      //expect name to be A Plus 5694'
+    //   expect(res.body.name).toEqual('A Plus 5694'); //use any other name value as a negative test
+         });
+    });
+
+    describe('Create & Fetch a new brand Test',() => {
+      it('POST a new /brands', async () => {
+    
+        const bNumber = Math.floor(Math.random() * 10000)
+        const data = {
+        name: 'Test Brand Samsung ' + bNumber,
+        description: 'Test Brand Samsung brand'
+      }  
+      const res = await request.post('/brands')
+      .send(data);  
+
+      //expect result code to be 200 (good)
+      expect(res.statusCode).toEqual(200);
+      //expect name to be A Plus 5694'
+      expect(res.body.name).toEqual(data.name); //use any other name value as a negative test
+      //expect the body to have createdAt filed
+      expect(res.body).toHaveProperty('createdAt');
+
+      newBrandId = res.body;
+        });
+    
+    it('GET /brands/:id', async () => {
+
+      const res = await request.get('/brands/' + newBrandId._id);  
+      //expect result code to be 200 (good)
+        expect(res.statusCode).toBe(200);
+      //expect name to be the  same as the one created'
+        expect(res.body.name).toEqual(newBrandId.name); //use any other name value as a negative test
+        //newBrandId = res.body;  
+         });
+
+    });
+
+    describe('PUT for a new brand Test',() => {
+      it('PUT brands', async () => {
+        const data = {
+        name: 'Test Brand Samsung ' + 'updated',
+      };
+      const res = await request.put('/brands/' + newBrandId._id)
+      .send(data);  
+      //expect result code to be 200 (good)
+      expect(res.statusCode).toEqual(200);
+      //expect name to be A Plus 5694'
+      expect(res.body.name).toEqual(data.name); //use any other name value as a negative test
+
+      //update newBrandId to equal the body of the resPut body
+      newBrandId = res.body;  
+         });     
+    });
+
+   describe('DELETE a new brand Test',() => {
+      it('DELETE brands', async () => {
+
+      //Now delete the same brand
+      const res = await request.delete('/brands/' + newBrandId._id);
+
+      //print it out for clarification
+      //check the status code
+      expect(res.statusCode).toEqual(200)
+      //check the body
+      expect(res.body).toEqual(null)
+         });     
+    });
+
+})

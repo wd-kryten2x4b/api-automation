@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="9" failures="0" errors="0" time="4.492">
+  <testsuite name="Brands Test" errors="0" failures="0" skipped="0" timestamp="2026-08-30T08:08:06" time="4.446" tests="9">
+    <testcase classname="Brands Test Create brand Test POST a new /brands" name="Brands Test Create brand Test POST a new /brands" time="0.46">
+    </testcase>
+    <testcase classname="Brands Test Create brand Test Schema Verification - Name is mandatory field" name="Brands Test Create brand Test Schema Verification - Name is mandatory field" time="0.335">
+    </testcase>
+    <testcase classname="Brands Test Create brand Test Schema Verification - Name minimum length &gt;1" name="Brands Test Create brand Test Schema Verification - Name minimum length &gt;1" time="0.337">
+    </testcase>
+    <testcase classname="Brands Test Create brand Test POST an existing brand /brands" name="Brands Test Create brand Test POST an existing brand /brands" time="0.861">
+    </testcase>
+    <testcase classname="Brands Test Create brand Test Business Logic - Brand doesnt exist" name="Brands Test Create brand Test Business Logic - Brand doesnt exist" time="0.435">
+    </testcase>
+    <testcase classname="Brands Test Create brand Test Business Logic - Brand id not valid length or format" name="Brands Test Create brand Test Business Logic - Brand id not valid length or format" time="0.337">
+    </testcase>
+    <testcase classname="Brands Test Fetch a new brand Test GET /brands/:id" name="Brands Test Fetch a new brand Test GET /brands/:id" time="0.434">
+    </testcase>
+    <testcase classname="Brands Test PUT for a new brand Test PUT brands" name="Brands Test PUT for a new brand Test PUT brands" time="0.537">
+    </testcase>
+    <testcase classname="Brands Test DELETE a new brand Test DELETE brands" name="Brands Test DELETE a new brand Test DELETE brands" time="0.525">
+    </testcase>
+  </testsuite>
+</testsuites>
