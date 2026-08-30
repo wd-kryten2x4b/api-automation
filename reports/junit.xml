@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="62" failures="2" errors="0" time="14.611">
+  <testsuite name="Upload files" errors="0" failures="0" skipped="0" timestamp="2026-08-30T12:38:00" time="6.015" tests="2">
+    <testcase classname="Upload files POST /upload/single" name="Upload files POST /upload/single" time="1.596">
+    </testcase>
+    <testcase classname="Upload files POST /upload/multiple" name="Upload files POST /upload/multiple" time="1.659">
+    </testcase>
+  </testsuite>
+  <testsuite name="Brands Negative Test" errors="0" failures="0" skipped="0" timestamp="2026-08-30T12:38:00" time="6.93" tests="8">
+    <testcase classname="Brands Negative Test Brand Schema Validation Test POST an existing brand /brands" name="Brands Negative Test Brand Schema Validation Test POST an existing brand /brands" time="0.483">
+    </testcase>
+    <testcase classname="Brands Negative Test Brand Schema Validation Test Business Logic - Brand doesnt exist" name="Brands Negative Test Brand Schema Validation Test Business Logic - Brand doesnt exist" time="0.428">
+    </testcase>
+    <testcase classname="Brands Negative Test Fetch a new brand Test GET /brands/:id" name="Brands Negative Test Fetch a new brand Test GET /brands/:id" time="0.653">
+    </testcase>
+    <testcase classname="Brands Negative Test PUT Schema &amp; Business Logic validation PUT brands fail on name &gt;30 chars" name="Brands Negative Test PUT Schema &amp; Business Logic validation PUT brands fail on name &gt;30 chars" time="0.959">
+    </testcase>
+    <testcase classname="Brands Negative Test PUT Schema &amp; Business Logic validation PUT brands description must be string" name="Brands Negative Test PUT Schema &amp; Business Logic validation PUT brands description must be string" time="0.514">
+    </testcase>
+    <testcase classname="Brands Negative Test PUT Schema &amp; Business Logic validation PUT brands Business Logic - Invalid Brand" name="Brands Negative Test PUT Schema &amp; Business Logic validation PUT brands Business Logic - Invalid Brand" time="0.31">
+    </testcase>
+    <testcase classname="Brands Negative Test DELETE a new brand Test DELETE brands" name="Brands Negative Test DELETE a new brand Test DELETE brands" time="0.506">
+    </testcase>
+    <testcase classname="Brands Negative Test DELETE a new brand Test DELETE Invalid brand" name="Brands Negative Test DELETE a new brand Test DELETE Invalid brand" time="0.32">
+    </testcase>
+  </testsuite>
+  <testsuite name="POC Tests" errors="0" failures="0" skipped="0" timestamp="2026-08-30T12:38:07" time="0.854" tests="6">
+    <testcase classname="POC Tests Get Requests GET /posts" name="POC Tests Get Requests GET /posts" time="0.039">
+    </testcase>
+    <testcase classname="POC Tests Get Requests GET /comments with query params" name="POC Tests Get Requests GET /comments with query params" time="0.036">
+    </testcase>
+    <testcase classname="POC Tests Post Requests POST to /posts" name="POC Tests Post Requests POST to /posts" time="0.122">
+    </testcase>
+    <testcase classname="POC Tests PUT Requests PUT to update  /posts{id}" name="POC Tests PUT Requests PUT to update  /posts{id}" time="0.315">
+    </testcase>
+    <testcase classname="POC Tests PATCH Requests PATCH to update  /posts{id}" name="POC Tests PATCH Requests PATCH to update  /posts{id}" time="0.196">
+    </testcase>
+    <testcase classname="POC Tests DELETE Requests PATCH to update  /posts{id}" name="POC Tests DELETE Requests PATCH to update  /posts{id}" time="0.111">
+    </testcase>
+  </testsuite>
+  <testsuite name="Brands Test" errors="0" failures="0" skipped="0" timestamp="2026-08-30T12:38:00" time="7.89" tests="6">
+    <testcase classname="Brands Test GET all brands Test GET /brands" name="Brands Test GET all brands Test GET /brands" time="2.523">
+    </testcase>
+    <testcase classname="Brands Test GET brand by Id Test GET /brands/:id" name="Brands Test GET brand by Id Test GET /brands/:id" time="0.509">
+    </testcase>
+    <testcase classname="Brands Test Create &amp; Fetch a new brand Test POST a new /brands" name="Brands Test Create &amp; Fetch a new brand Test POST a new /brands" time="0.412">
+    </testcase>
+    <testcase classname="Brands Test Create &amp; Fetch a new brand Test GET /brands/:id" name="Brands Test Create &amp; Fetch a new brand Test GET /brands/:id" time="0.562">
+    </testcase>
+    <testcase classname="Brands Test PUT for a new brand Test PUT brands" name="Brands Test PUT for a new brand Test PUT brands" time="0.507">
+    </testcase>
+    <testcase classname="Brands Test DELETE a new brand Test DELETE brands" name="Brands Test DELETE a new brand Test DELETE brands" time="0.62">
+    </testcase>
+  </testsuite>
+  <testsuite name="Brands Test" errors="0" failures="0" skipped="0" timestamp="2026-08-30T12:38:06" time="2.086" tests="1">
+    <testcase classname="Brands Test GET /brands" name="Brands Test GET /brands" time="2.051">
+    </testcase>
+  </testsuite>
+  <testsuite name="Brands Test" errors="0" failures="1" skipped="0" timestamp="2026-08-30T12:38:00" time="8.485" tests="9">
+    <testcase classname="Brands Test Create brand Test POST a new /brands" name="Brands Test Create brand Test POST a new /brands" time="0.478">
+    </testcase>
+    <testcase classname="Brands Test Create brand Test Schema Verification - Name is mandatory field" name="Brands Test Create brand Test Schema Verification - Name is mandatory field" time="0.335">
+    </testcase>
+    <testcase classname="Brands Test Create brand Test Schema Verification - Name minimum length &gt;1" name="Brands Test Create brand Test Schema Verification - Name minimum length &gt;1" time="0.652">
+    </testcase>
+    <testcase classname="Brands Test Create brand Test POST an existing brand /brands" name="Brands Test Create brand Test POST an existing brand /brands" time="1.814">
+    </testcase>
+    <testcase classname="Brands Test Create brand Test Business Logic - Brand doesnt exist" name="Brands Test Create brand Test Business Logic - Brand doesnt exist" time="0.392">
+    </testcase>
+    <testcase classname="Brands Test Create brand Test Business Logic - Brand id not valid length or format" name="Brands Test Create brand Test Business Logic - Brand id not valid length or format" time="0.348">
+    </testcase>
+    <testcase classname="Brands Test Fetch a new brand Test GET /brands/:id" name="Brands Test Fetch a new brand Test GET /brands/:id" time="0.426">
+    </testcase>
+    <testcase classname="Brands Test PUT for a new brand Test PUT brands" name="Brands Test PUT for a new brand Test PUT brands" time="0.68">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 200
+Received: 422
+    at Object.&lt;anonymous&gt; (C:\Users\admin\api-automation\specs\C:\Users\admin\api-automation\specs\brands.schema.spec.ts:136:30)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)</failure>
+    </testcase>
+    <testcase classname="Brands Test DELETE a new brand Test DELETE brands" name="Brands Test DELETE a new brand Test DELETE brands" time="0.534">
+    </testcase>
+  </testsuite>
+  <testsuite name="Categories API Test Cases" errors="0" failures="1" skipped="0" timestamp="2026-08-30T12:38:00" time="9.593" tests="4">
+    <testcase classname="Categories API Test Cases Get Categories GET /categories" name="Categories API Test Cases Get Categories GET /categories" time="1.62">
+    </testcase>
+    <testcase classname="Categories API Test Cases Create Categories POST /categories" name="Categories API Test Cases Create Categories POST /categories" time="0.68">
+    </testcase>
+    <testcase classname="Categories API Test Cases Update Categories Put /categories by ID" name="Categories API Test Cases Update Categories Put /categories by ID" time="0.614">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 400
+Received: 200
+    at Object.&lt;anonymous&gt; (C:\Users\admin\api-automation\specs\C:\Users\admin\api-automation\specs\categories.spec.ts:53:36)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)</failure>
+    </testcase>
+    <testcase classname="Categories API Test Cases Delete Categories Delete /categories by ID" name="Categories API Test Cases Delete Categories Delete /categories by ID" time="0.53">
+    </testcase>
+  </testsuite>
+  <testsuite name="Brands API Test Cases" errors="0" failures="0" skipped="0" timestamp="2026-08-30T12:38:00" time="13.278" tests="13">
+    <testcase classname="Brands API Test Cases Fetch brands GET /brands" name="Brands API Test Cases Fetch brands GET /brands" time="3.031">
+    </testcase>
+    <testcase classname="Brands API Test Cases Create Brands POST /brands" name="Brands API Test Cases Create Brands POST /brands" time="0.001">
+    </testcase>
+    <testcase classname="Brands API Test Cases Create Brands Schema Verification - Name is mandatory field" name="Brands API Test Cases Create Brands Schema Verification - Name is mandatory field" time="0.331">
+    </testcase>
+    <testcase classname="Brands API Test Cases Create Brands Schema Verification - Name minimum length &gt;1" name="Brands API Test Cases Create Brands Schema Verification - Name minimum length &gt;1" time="0.333">
+    </testcase>
+    <testcase classname="Brands API Test Cases Create Brands Business Logig - brands name &gt;30 chars" name="Brands API Test Cases Create Brands Business Logig - brands name &gt;30 chars" time="0.33">
+    </testcase>
+    <testcase classname="Brands API Test Cases Create Brands Business Logic - Duplicate brand entries not allowed" name="Brands API Test Cases Create Brands Business Logic - Duplicate brand entries not allowed" time="0.572">
+    </testcase>
+    <testcase classname="Brands API Test Cases Fetch Individual Brand GET /brands/:id" name="Brands API Test Cases Fetch Individual Brand GET /brands/:id" time="0.428">
+    </testcase>
+    <testcase classname="Brands API Test Cases Fetch Individual Brand Business Logic - Brand doesnt exist" name="Brands API Test Cases Fetch Individual Brand Business Logic - Brand doesnt exist" time="0.425">
+    </testcase>
+    <testcase classname="Brands API Test Cases Update Brands PUT brands fail on name &gt;30 chars" name="Brands API Test Cases Update Brands PUT brands fail on name &gt;30 chars" time="0.334">
+    </testcase>
+    <testcase classname="Brands API Test Cases Update Brands PUT brands description must be string" name="Brands API Test Cases Update Brands PUT brands description must be string" time="0.334">
+    </testcase>
+    <testcase classname="Brands API Test Cases Update Brands PUT brands Business Logic - Invalid Brand" name="Brands API Test Cases Update Brands PUT brands Business Logic - Invalid Brand" time="0.337">
+    </testcase>
+    <testcase classname="Brands API Test Cases DELETE Brands DELETE brands" name="Brands API Test Cases DELETE Brands DELETE brands" time="0.526">
+    </testcase>
+    <testcase classname="Brands API Test Cases DELETE Brands DELETE Invalid brand" name="Brands API Test Cases DELETE Brands DELETE Invalid brand" time="0.324">
+    </testcase>
+  </testsuite>
+  <testsuite name="Brands API Test Cases" errors="0" failures="0" skipped="0" timestamp="2026-08-30T12:38:00" time="13.737" tests="13">
+    <testcase classname="Brands API Test Cases Fetch brands GET /brands" name="Brands API Test Cases Fetch brands GET /brands" time="3.239">
+    </testcase>
+    <testcase classname="Brands API Test Cases Create Brands POST /brands" name="Brands API Test Cases Create Brands POST /brands" time="0.002">
+    </testcase>
+    <testcase classname="Brands API Test Cases Create Brands Schema Verification - Name is mandatory field" name="Brands API Test Cases Create Brands Schema Verification - Name is mandatory field" time="0.354">
+    </testcase>
+    <testcase classname="Brands API Test Cases Create Brands Schema Verification - Name minimum length &gt;1" name="Brands API Test Cases Create Brands Schema Verification - Name minimum length &gt;1" time="0.305">
+    </testcase>
+    <testcase classname="Brands API Test Cases Create Brands Business Logig - brands name &gt;30 chars" name="Brands API Test Cases Create Brands Business Logig - brands name &gt;30 chars" time="0.607">
+    </testcase>
+    <testcase classname="Brands API Test Cases Create Brands Business Logic - Duplicate brand entries not allowed" name="Brands API Test Cases Create Brands Business Logic - Duplicate brand entries not allowed" time="0.43">
+    </testcase>
+    <testcase classname="Brands API Test Cases Fetch Individual Brand GET /brands/:id" name="Brands API Test Cases Fetch Individual Brand GET /brands/:id" time="0.425">
+    </testcase>
+    <testcase classname="Brands API Test Cases Fetch Individual Brand Business Logic - Brand doesnt exist" name="Brands API Test Cases Fetch Individual Brand Business Logic - Brand doesnt exist" time="0.432">
+    </testcase>
+    <testcase classname="Brands API Test Cases Update Brands PUT brands fail on name &gt;30 chars" name="Brands API Test Cases Update Brands PUT brands fail on name &gt;30 chars" time="0.334">
+    </testcase>
+    <testcase classname="Brands API Test Cases Update Brands PUT brands description must be string" name="Brands API Test Cases Update Brands PUT brands description must be string" time="0.334">
+    </testcase>
+    <testcase classname="Brands API Test Cases Update Brands PUT brands Business Logic - Invalid Brand" name="Brands API Test Cases Update Brands PUT brands Business Logic - Invalid Brand" time="0.305">
+    </testcase>
+    <testcase classname="Brands API Test Cases DELETE Brands DELETE brands" name="Brands API Test Cases DELETE Brands DELETE brands" time="0.532">
+    </testcase>
+    <testcase classname="Brands API Test Cases DELETE Brands DELETE Invalid brand" name="Brands API Test Cases DELETE Brands DELETE Invalid brand" time="0.336">
+    </testcase>
+  </testsuite>
+</testsuites>
