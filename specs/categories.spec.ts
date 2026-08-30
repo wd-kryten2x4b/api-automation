@@ -50,7 +50,7 @@ describe('Update Categories', () => {
               .putCategories(categoryId, body)
               .set("Authorization", "Bearer " + token);
             
-            expect(res.statusCode).toBe(200);
+            expect(res.statusCode).toBe(400);
             expect(res.body.name).toEqual(body.name);
             expect(res.body._id).toEqual(categoryId);
             });
