@@ -20,7 +20,8 @@ module.exports = {
     ],
     ['jest-html-reporters',
     {
-      publicPath: 'reports'
+      publicPath: 'reports',
+      inlineSource: true      
     } 
     ]
   ]
