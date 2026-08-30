@@ -9,6 +9,8 @@ module.exports = {
   transform: {
     ...tsJestTransformCfg,
   },
+  testPathIgnorePatterns: ["/node_modules/", "/Controller/"],
+  
   reporters: [
     'default',
     ['jest-junit',
